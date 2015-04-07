@@ -1,0 +1,9 @@
+<snippet>
+  <content>
+<![CDATA[
+${1:/* OPTIONS: variables are (in order): duration, count, delay, function,  fill}+fadeInLeftBig
+]]>
+  </content>
+  <tabTrigger>fadeInLeftBig</tabTrigger>
+  <description>fadeInLeftBig animation</description>
+</snippet>

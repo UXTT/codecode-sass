@@ -1,0 +1,1230 @@
+<snippet>
+  <content>
+<![CDATA[
+\$countDefault: 1s !default
+\$durationDefault: 1s !default
+\$delayDefault: 0s !default
+\$functionDefault: ease !default
+\$fillDefault: both
+\$visibilityDefault: hidden !default
+
+=count(\$count: 1)
+  -webkit-animation-iteration-count: \$count
+  -moz-animation-iteration-count: \$count
+  -ms-animation-iteration-count: \$count
+  -o-animation-iteration-count: \$count
+  animation-iteration-count: \$count
+
+=duration(\$duration: 1s)
+  -webkit-animation-duration: \$duration
+  -moz-animation-duration: \$duration
+  -ms-animation-duration: \$duration
+  -o-animation-duration: \$duration
+  animation-duration: \$duration
+
+=delay(\$delay: .2s)
+  -webkit-animation-delay: \$delay
+  -moz-animation-delay: \$delay
+  -ms-animation-delay: \$delay
+  -o-animation-delay: \$delay
+  animation-delay: \$delay
+
+=function(\$function: ease)
+  -webkit-animation-timing-function: \$function
+  -moz-animation-timing-function: \$function
+  -ms-animation-timing-function: \$function
+  -o-animation-timing-function: \$function
+  animation-timing-function: \$function
+
+=fill-mode(\$fill: both)
+  -webkit-animation-fill-mode: \$fill
+  -moz-animation-fill-mode: \$fill
+  -ms-animation-fill-mode: \$fill
+  -o-animation-fill-mode: \$fill
+  animation-fill-mode: \$fill
+
+=visibility(\$visibility: hidden)
+  -webkit-backface-visibility: \$visibility
+  -moz-backface-visibility: \$visibility
+  -ms-backface-visibility: \$visibility
+  -o-backface-visibility: \$visibility
+  backface-visibility: \$visibility
+
+=transform-origin(\$transform-origin: center center)
+  -webkit-transform-origin: \$transform-origin
+  -moz-transform-origin: \$transform-origin
+  -ms-transform-origin: \$transform-origin
+  -o-transform-origin: \$transform-origin
+  transform-origin: \$transform-origin
+
+=transform-style(\$transform-style: flat)
+  -webkit-transform-style: \$transform-style
+  -moz-transform-style: \$transform-style
+  -o-transform-style: \$transform-style
+  transform-style: \$transform-style
+
+=animation-name(\$animation-name)
+  -webkit-animation-name: \$animation-name
+  -moz-animation-name: \$animation-name
+  -ms-animation-name: \$animation-name
+  -o-animation-name: \$animation-name
+  animation-name: \$animation-name
+
+=keyframes(\$animation-name)
+  @-webkit-keyframes #{\$animation-name}
+    @content
+
+  @-moz-keyframes #{\$animation-name}
+    @content
+
+  @-ms-keyframes #{\$animation-name}
+    @content
+
+  @-o-keyframes #{\$animation-name}
+    @content
+
+  @keyframes #{\$animation-name}
+    @content
+
+// INDEX OF ATTENTION SEEKERS
+
++keyframes(bounce)
+  0%, 20%, 50%, 80%, 100%transform: translateY(0)}
+  40%transform: translateY(-30px)}
+  60%transform: translateY(-15px)}
+
+=bounce(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(bounce)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
++keyframes(flash)
+  0%, 50%, 100%opacity: 1}
+  25%, 75%opacity: 0}
+
+=flash(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(flash)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
+// originally authored by Nick Pettit - https://github.com/nickpettit/glide
+
++keyframes(pulse)
+  0%transform: scale(1)}
+  50%transform: scale(1.1)}
+  100%transform: scale(1)}
+
+=pulse(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(pulse)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(rubberBand)
+  0%
+    transform: scale3d(1, 1, 1)
+
+  30%
+    transform: scale3d(1.25, 0.75, 1)
+
+  40%
+    transform: scale3d(0.75, 1.25, 1)
+
+  50%
+    transform: scale3d(1.15, 0.85, 1)
+
+  65%
+    transform: scale3d(.95, 1.05, 1)
+
+  75%
+    transform: scale3d(1.05, .95, 1)
+
+  100%
+    transform: scale3d(1, 1, 1)
+
+=rubberBand(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(rubberBand)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(shake)
+  0%, 100%transform: translateX(0)}
+  10%, 30%, 50%, 70%, 90%transform: translateX(-10px)}
+  20%, 40%, 60%, 80%transform: translateX(10px)}
+
+=shake(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(shake)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(swing)
+  20%, 40%, 60%, 80%, 100% -webkit-transform-origin: top center }
+  20% -webkit-transform: rotate(15deg) }
+  40% -webkit-transform: rotate(-10deg) }
+  60% -webkit-transform: rotate(5deg) }
+  80% -webkit-transform: rotate(-5deg) }
+  100% -webkit-transform: rotate(0deg) }
+
+=swing(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +transform-origin(top center)
+  +animation-name(swing)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
++keyframes(tada)
+  0%-webkit-transform: scale(1)}
+  10%, 20%-webkit-transform: scale(0.9) rotate(-3deg)}
+  30%, 50%, 70%, 90%-webkit-transform: scale(1.1) rotate(3deg)}
+  40%, 60%, 80%-webkit-transform: scale(1.1) rotate(-3deg)}
+  100%-webkit-transform: scale(1) rotate(0)}
+
+=tada(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(tada)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
+// originally authored by Nick Pettit - https://github.com/nickpettit/glide
+
++keyframes(wobble)
+  0%-webkit-transform: translateX(0%)}
+  15%-webkit-transform: translateX(-25%) rotate(-5deg)}
+  30%-webkit-transform: translateX(20%) rotate(3deg)}
+  45%-webkit-transform: translateX(-15%) rotate(-3deg)}
+  60%-webkit-transform: translateX(10%) rotate(2deg)}
+  75%-webkit-transform: translateX(-5%) rotate(-1deg)}
+  100%-webkit-transform: translateX(0%)}
+
+=wobble(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(wobble)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
+// INDEX OF BOUNCING ENTRANCES
+
++keyframes(bounceIn)
+  0%opacity: 0 -webkit-transform: scale(.3)}
+  50%opacity: 1 -webkit-transform: scale(1.05)}
+  70%-webkit-transform: scale(.9)}
+  100%-webkit-transform: scale(1)}
+
+=bounceIn(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(bounceIn)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
+
++keyframes(bounceInDown)
+  0%opacity: 0 -webkit-transform: translateY(-2000px)}
+  60%opacity: 1 -webkit-transform: translateY(30px)}
+  80%-webkit-transform: translateY(-10px)}
+  100%-webkit-transform: translateY(0)}
+
+=bounceInDown(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(bounceInDown)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
+
++keyframes(bounceInLeft)
+  0%opacity: 0 -webkit-transform: translateX(-2000px)}
+  60%opacity: 1 -webkit-transform: translateX(30px)}
+  80%-webkit-transform: translateX(-10px)}
+  100%-webkit-transform: translateX(0)}
+
+=bounceInLeft(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(bounceInLeft)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
+
++keyframes(bounceInRight)
+  0%opacity: 0 -webkit-transform: translateX(2000px)}
+  60%opacity: 1 -webkit-transform: translateX(-30px)}
+  80%-webkit-transform: translateX(10px)}
+  100%-webkit-transform: translateX(0)}
+
+=bounceInRight(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(bounceInRight)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(bounceInUp)
+  0%opacity: 0 -webkit-transform: translateY(2000px)}
+  60%opacity: 1 -webkit-transform: translateY(-30px)}
+  80%-webkit-transform: translateY(10px)}
+  100%-webkit-transform: translateY(0)}
+
+=bounceInUp(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(bounceInUp)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
+// INDEX OF BOUNCING EXITS
+
++keyframes(bounceOut)
+  0%-webkit-transform: scale(1)}
+  25%-webkit-transform: scale(.95)}
+  50%opacity: 1 -webkit-transform: scale(1.1)}
+  100%opacity: 0 -webkit-transform: scale(.3)}
+
+=bounceOut(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(bounceOut)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(bounceOutDown)
+  0%-webkit-transform: translateY(0)}
+  20%opacity: 1 -webkit-transform: translateY(-20px)}
+  100%opacity: 0 -webkit-transform: translateY(2000px)}
+
+=bounceOutDown(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(bounceOutDown)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(bounceOutLeft)
+  0%-webkit-transform: translateX(0)}
+  20%opacity: 1 -webkit-transform: translateX(20px)}
+  100%opacity: 0 -webkit-transform: translateX(-2000px)}
+
+=bounceOutLeft(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(bounceOutLeft)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
++keyframes(bounceOutRight)
+  0%-webkit-transform: translateX(0)}
+  20%opacity: 1 -webkit-transform: translateX(-20px)}
+  100%opacity: 0 -webkit-transform: translateX(2000px)}
+
+=bounceOutRight(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(bounceOutRight)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(bounceOutUp)
+  0%-webkit-transform: translateY(0)}
+  20%opacity: 1 -webkit-transform: translateY(20px)}
+  100%opacity: 0 -webkit-transform: translateY(-2000px)}
+
+=bounceOutUp(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(bounceOutUp)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
+// INDEX OF FADING ENTRANCES
+
++keyframes(fadeIn)
+  0%opacity: 0}
+  100%opacity: 1}
+
+=fadeIn(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(fadeIn)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(fadeInDown)
+  0%opacity: 0 -webkit-transform: translateY(-20px)}
+  100%opacity: 1 -webkit-transform: translateY(0)}
+
+=fadeInDown(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(fadeInDown)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(fadeInDownBig)
+  0%opacity: 0 -webkit-transform: translateY(-2000px)}
+  100%opacity: 1 -webkit-transform: translateY(0)}
+
+=fadeInDownBig(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(fadeInDownBig)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(fadeInLeft)
+  0%opacity: 0 -webkit-transform: translateX(-20px)}
+  100%opacity: 1 -webkit-transform: translateX(0)}
+
+=fadeInLeft(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(fadeInLeft)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(fadeInLeftBig)
+  0%opacity: 0 transform: translateX(-2000px)}
+  100%opacity: 1 transform: translateX(0)}
+
+=fadeInLeftBig(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(fadeInLeftBig)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(fadeInRight)
+  0%opacity: 0 transform: translateX(20px)}
+  100%opacity: 1 transform: translateX(0)}
+
+=fadeInRight(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(fadeInRight)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(fadeInRightBig)
+  0%opacity: 0 transform: translateX(2000px)}
+  100%opacity: 1 transform: translateX(0)}
+
+=fadeInRightBig(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(fadeInRightBig)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
++keyframes(fadeInUp)
+  0%opacity: 0 transform: translateY(20px)}
+  100%opacity: 1 transform: translateY(0)}
+
+=fadeInUp(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(fadeInUp)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(fadeInUpBig)
+  0%opacity: 0 transform: translateY(2000px)}
+  100%opacity: 1 transform: translateY(0)}
+
+=fadeInUpBig(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(fadeInUpBig)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
+// INDEX OF FADING EXITS
+
++keyframes(fadeOut)
+  0%opacity: 1}
+  100%opacity: 0}
+
+=fadeOut(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(fadeOut)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
++keyframes(fadeOutDown)
+  0%opacity: 1 transform: translateY(0)}
+  100%opacity: 0 transform: translateY(20px)}
+
+=fadeOutDown(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(fadeOutDown)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(fadeOutDownBig)
+  0%opacity: 1 transform: translateY(0)}
+  100%opacity: 0 transform: translateY(2000px)}
+
+=fadeOutDownBig(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(fadeOutDownBig)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(fadeOutLeft)
+  0%opacity: 1 transform: translateX(0)}
+  100%opacity: 0 transform: translateX(-20px)}
+
+=fadeOutLeft(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(fadeOutLeft)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(fadeOutLeftBig)
+  0%opacity: 1 transform: translateX(0)}
+  100%opacity: 0 transform: translateX(-2000px)}
+
+=fadeOutLeftBig(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(fadeOutLeftBig)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(fadeOutRight)
+  0%opacity: 1 transform: translateX(0)}
+  100%opacity: 0 transform: translateX(20px)}
+
+=fadeOutRight(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(fadeOutRight)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(fadeOutRightBig)
+  0%opacity: 1 transform: translateX(0)}
+  100%opacity: 0 transform: translateX(2000px)}
+
+=fadeOutRightBig(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(fadeOutRightBig)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(fadeOutUp)
+  0%opacity: 1 transform: translateY(0)}
+  100%opacity: 0 transform: translateY(-20px)}
+
+=fadeOutUp(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(fadeOutUp)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(fadeOutUpBig)
+  0%opacity: 1 transform: translateY(0)}
+  100%opacity: 0 transform: translateY(-2000px)}
+
+=fadeOutUpBig(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(fadeOutUpBig)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
+// INDEX OF FLIPPERS
+
++keyframes(flip)
+  0%transform: perspective(400px) rotateY(0) animation-timing-function: ease-out}
+  40%transform: perspective(400px) translateZ(150px) rotateY(170deg) animation-timing-function: ease-out}
+  50%transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1) animation-timing-function: ease-in}
+  80%transform: perspective(400px) rotateY(360deg) scale(.95) animation-timing-function: ease-in}
+  100%transform: perspective(400px) scale(1) animation-timing-function: ease-in}
+
+=flip(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +transform-style(preserve-3d)
+  +animation-name(flip)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(flipInX)
+  0%transform: perspective(400px) rotateX(90deg) opacity: 0}
+  40%transform: perspective(400px) rotateX(-10deg)}
+  70%transform: perspective(400px) rotateX(10deg)}
+  100%transform: perspective(400px) rotateX(0deg) opacity: 1}
+
+=flipInX(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(flipInX)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(flipInY)
+  0%transform: perspective(400px) rotateY(90deg) opacity: 0}
+  40%transform: perspective(400px) rotateY(-10deg)}
+  70%transform: perspective(400px) rotateY(10deg)}
+  100%transform: perspective(400px) rotateY(0deg) opacity: 1}
+
+=flipInY(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(flipInY)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(flipOutX)
+  0%transform: perspective(400px) rotateX(0deg) opacity: 1}
+  100%transform: perspective(400px) rotateX(90deg) opacity: 0}
+
+=flipOutX(\$count: \$countDefult, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(flipOutX)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(flipOutY)
+  0%transform: perspective(400px) rotateY(0deg) opacity: 1}
+  100%transform: perspective(400px) rotateY(90deg) opacity: 0}
+
+=flipOutY(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(flipOutY)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
+// INDEX OF LIGHTSPEED ANIMATIONS
+
++keyframes(lightSpeedIn)
+  0% transform: translateX(100%) skewX(-30deg) opacity: 0}
+  60% transform: translateX(-20%) skewX(30deg) opacity: 1}
+  80% transform: translateX(0%) skewX(-15deg) opacity: 1}
+  100% transform: translateX(0%) skewX(0deg) opacity: 1}
+
+=lightSpeedIn(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(lightSpeedIn)
+  +count(\$count)
+  +function(ease-out)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(lightSpeedOut)
+  0% transform: translateX(0%) skewX(0deg) opacity: 1}
+  100% transform: translateX(100%) skewX(-30deg) opacity: 0}
+
+=lightSpeedOut(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(lightSpeedOut)
+  +count(\$count)
+  +function(ease-in)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
+// INDEX OF ROTATING ENTRANCES
+
++keyframes(rotateIn)
+  0%transform-origin: center center transform: rotate(-200deg) opacity: 0}
+  100%transform-origin: center center transform: rotate(0) opacity: 1}
+
+=rotateIn(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(rotateIn)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(rotateInDownLeft)
+  0%transform-origin: left bottom transform: rotate(-90deg) opacity: 0}
+  100%transform-origin: left bottom transform: rotate(0) opacity: 1}
+
+=rotateInDownLeft(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(rotateInDownLeft)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(rotateInDownRight)
+  0%transform-origin: right bottom transform: rotate(90deg) opacity: 0}
+  100%transform-origin: right bottom transform: rotate(0) opacity: 1}
+
+=rotateInDownRight(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(rotateInDownRight)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(rotateInUpLeft)
+  0%transform-origin: left bottom transform: rotate(90deg) opacity: 0}
+  100%transform-origin: left bottom transform: rotate(0) opacity: 1}
+
+=rotateInUpLeft(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(rotateInUpLeft)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(rotateInUpRight)
+  0%transform-origin: right bottom transform: rotate(-90deg) opacity: 0}
+  100%transform-origin: right bottom transform: rotate(0) opacity: 1}
+
+=rotateInUpRight(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(rotateInUpRight)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
+// INDEX OF ROTATING EXITS
+
++keyframes(rotateOut)
+  0%transform-origin: center center transform: rotate(0) opacity: 1}
+  100%transform-origin: center center transform: rotate(200deg) opacity: 0}
+
+=rotateOut(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(rotateOut)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(rotateOutDownLeft)
+  0%transform-origin: left bottom transform: rotate(0) opacity: 1}
+  100%transform-origin: left bottom transform: rotate(90deg) opacity: 0}
+
+=rotateOutDownLeft(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(rotateOutDownLeft)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(rotateOutDownRight)
+  0%transform-origin: right bottom transform: rotate(0) opacity: 1}
+  100%transform-origin: right bottom transform: rotate(-90deg) opacity: 0}
+
+=rotateOutDownRight(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(rotateOutDownRight)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(rotateOutUpLeft)
+  0%transform-origin: left bottom transform: rotate(0) opacity: 1}
+  100%transform-origin: left bottom transform: rotate(-90deg) opacity: 0}
+
+=rotateOutUpLeft(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(rotateOutUpLeft)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(rotateOutUpRight)
+  0%transform-origin: right bottom transform: rotate(0) opacity: 1}
+  100%transform-origin: right bottom transform: rotate(90deg) opacity: 0}
+
+=rotateOutUpRight(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(rotateOutUpRight)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
+// INDEX OF SLIDING ENTRANCES
+
++keyframes(slideInDown)
+  0%opacity: 0 transform: translateY(-2000px)}
+  100%transform: translateY(0)}
+
+=slideInDown(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(slideInDown)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(slideInLeft)
+  0%opacity: 0 transform: translateX(-2000px)}
+  100%transform: translateX(0)}
+
+=slideInLeft(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(slideInLeft)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(slideInRight)
+  0%opacity: 0 transform: translateX(2000px)}
+  100%transform: translateX(0)}
+
+=slideInRight(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(slideInRight)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
++keyframes(slideInUp)
+  0%opacity: 0 transform: translateY(2000px)}
+  100%transform: translateY(0)}
+
+=slideInUp(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(slideInUp)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
+// INDEX OF SLIDING EXITS
+
++keyframes(slideOutDown)
+  0%transform: translateY(0)}
+  100%opacity: 0 transform: translateY(2000px)}
+
+=slideOutDown(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(slideOutDown)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(slideOutLeft)
+  0%transform: translateX(0)}
+  100%opacity: 0 transform: translateX(-2000px)}
+
+=slideOutLeft(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(slideOutLeft)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(slideOutRight)
+  0%transform: translateX(0)}
+  100%opacity: 0 transform: translateX(2000px)}
+
+=slideOutRight(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(slideOutRight)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(slideOutUp)
+  0%transform: translateY(0)}
+  100%opacity: 0 transform: translateY(-2000px)}
+
+=slideOutUp(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(slideOutUp)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
+// INDEX OF SPECIAL ANIMATIONS
+
++keyframes(hinge)
+  0%
+    transform: rotate(0)
+    transform-origin: top left
+    animation-timing-function: ease-in-out
+  20%, 60%
+    transform: rotate(80deg)
+    transform-origin: top left
+    animation-timing-function: ease-in-out
+  40%
+    transform: rotate(60deg)
+    transform-origin: top left
+    animation-timing-function: ease-in-out
+  80%
+    transform: rotate(60deg) translateY(0)
+    opacity: 1
+    transform-origin: top left
+    animation-timing-function: ease-in-out
+  100%
+    transform: translateY(700px)
+    opacity: 0
+
+=hinge(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(hinge)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(rollIn)
+  0%
+    opacity: 0
+    transform: translateX(-100%) rotate(-120deg)
+  100%
+    opacity: 1
+    transform: translateX(0px) rotate(0deg)
+
+=rollIn(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(rollIn)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
+// originally authored by Nick Pettit - https://github.com/nickpettit/glide
+
++keyframes(rollOut)
+  0%
+    opacity: 1
+    transform: translateX(0px) rotate(0deg)
+  100%
+    opacity: 0
+    transform: translateX(100%) rotate(120deg)
+
+=rollOut(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(rollOut)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
+// INDEX OF ZOOMING ENTRANCES
+
++keyframes(zoomIn)
+  0%
+    opacity: 0
+    transform: scale3d(.3, .3, .3)
+  50%
+    opacity: 1
+
+=zoomIn(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(zoomIn)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(zoomInDown)
+  0%
+    opacity: 0
+    transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0)
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190)
+  60%
+    opacity: 1
+    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0)
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1)
+
+=zoomInDown(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(zoomInDown)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(zoomInLeft)
+  0%
+    opacity: 0
+    transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0)
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190)
+  60%
+    opacity: 1
+    transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0)
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1)
+
+=zoomInLeft(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(zoomInLeft)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(zoomInRight)
+  0%
+    opacity: 0
+    transform: scale3d(.1, .1, .1) translate3d(1000px, 0, 0)
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190)
+  60%
+    opacity: 1
+    transform: scale3d(.475, .475, .475) translate3d(-10px, 0, 0)
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1)
+
+=zoomInRight(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(zoomInRight)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(zoomInUp)
+  0%
+    opacity: 0
+    transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0)
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190)
+  60%
+    opacity: 1
+    transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0)
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1)
+
+=zoomInUp(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(zoomInUp)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
+// INDEX OF ZOOMING EXITS
+
++keyframes(zoomOut)
+  0%
+    opacity: 1
+  50%
+    opacity: 0
+    transform: scale3d(.3, .3, .3)
+  100%
+    opacity: 0
+
+=zoomOut(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(zoomOut)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(zoomOutDown)
+  40%
+    opacity: 1
+    transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0)
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190)
+  100%
+    opacity: 0
+    transform: scale3d(.1, .1, .1) translate3d(0, 2000px, 0)
+    transform-origin: center bottom
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1)
+
+=zoomOutDown(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(zoomOutDown)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(zoomOutLeft)
+  40%
+    opacity: 1
+    transform: scale3d(.475, .475, .475) translate3d(42px, 0, 0)
+  100%
+    opacity: 0
+    transform: scale(.1) translate3d(-2000px, 0, 0)
+    transform-origin: left center
+
+=zoomOutLeft(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(zoomOutLeft)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(zoomOutRight)
+  40%
+    opacity: 1
+    transform: scale3d(.475, .475, .475) translate3d(-42px, 0, 0)
+  100%
+    opacity: 0
+    transform: scale(.1) translate3d(2000px, 0, 0)
+    transform-origin: right center
+
+=zoomOutRight(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(zoomOutRight)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
++keyframes(zoomOutUp)
+  40%
+    opacity: 1
+    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0)
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190)
+  100%
+    opacity: 0
+    transform: scale3d(.1, .1, .1) translate3d(0, -2000px, 0)
+    transform-origin: center bottom
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1)
+
+=zoomOutUp(\$count: \$countDefault, \$duration: \$durationDefault, \$delay: \$delayDefault, \$function: \$functionDefault, \$fill: \$fillDefault, \$visibility: \$visibilityDefault)
+  +animation-name(zoomOutUp)
+  +count(\$count)
+  +duration(\$duration)
+  +delay(\$delay)
+  +function(\$function)
+  +fill-mode(\$fill)
+  +visibility(\$visibility)
+
+]]>
+  </content>
+  <tabTrigger>animate</tabTrigger>
+  <description>Animate css master library</description>
+</snippet>

@@ -1,0 +1,9 @@
+<snippet>
+  <content>
+<![CDATA[
+${1:/* OPTIONS: variables are (in order): duration, count, delay, function,  fill}+slideOutLeft
+]]>
+  </content>
+  <tabTrigger>slideOutLeft</tabTrigger>
+  <description>slideOutLeft animation</description>
+</snippet>

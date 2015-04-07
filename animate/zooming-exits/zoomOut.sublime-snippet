@@ -1,0 +1,9 @@
+<snippet>
+  <content>
+<![CDATA[
+${1:/* OPTIONS: variables are (in order): duration, count, delay, function,  fill}+zoomOut
+]]>
+  </content>
+  <tabTrigger>zoomOut</tabTrigger>
+  <description>zoomOut animation</description>
+</snippet>

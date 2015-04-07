@@ -1,0 +1,9 @@
+<snippet>
+	<content>
+<![CDATA[
++skew($1)
+]]>
+	</content>
+	<tabTrigger>skew</tabTrigger>
+	<description>Skew</description>
+</snippet>

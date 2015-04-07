@@ -1,0 +1,9 @@
+<snippet>
+  <content>
+<![CDATA[
+${1:/* OPTIONS: variables are (in order): duration, count, delay, function,  fill}+wobble
+]]>
+  </content>
+  <tabTrigger>wobble</tabTrigger>
+  <description>wobble animation</description>
+</snippet>

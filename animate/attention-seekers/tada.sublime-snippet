@@ -1,0 +1,9 @@
+<snippet>
+  <content>
+<![CDATA[
+${1:/* OPTIONS: variables are (in order): duration, count, delay, function,  fill}+tada
+]]>
+  </content>
+  <tabTrigger>tada</tabTrigger>
+  <description>tada animation</description>
+</snippet>

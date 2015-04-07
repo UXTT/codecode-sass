@@ -1,0 +1,9 @@
+<snippet>
+	<content>
+<![CDATA[
+${2:/* main device width (when 100% doesn't cut). variable is the pixels OFF max width}+devicewidth(${1:40px})
+]]>
+	</content>
+	<tabTrigger>devicewidth</tabTrigger>
+	<description>Device Width</description>
+</snippet>

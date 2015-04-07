@@ -1,0 +1,9 @@
+<snippet>
+  <content>
+<![CDATA[
+${1:/* OPTIONS: variables are (in order): duration, count, delay, function,  fill}+flipInX
+]]>
+  </content>
+  <tabTrigger>flipInX</tabTrigger>
+  <description>flipInX animation</description>
+</snippet>
